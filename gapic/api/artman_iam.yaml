@@ -1,0 +1,30 @@
+common:
+  api_name: iam-admin
+  api_version: v1
+  package_type: grpc_client
+  organization_name: google-cloud
+  proto_deps:
+    - google-iam-v1
+  import_proto_path:
+    - ${GOOGLEAPIS}
+  src_proto_path:
+    - ${GOOGLEAPIS}/google/iam/admin/v1
+  service_yaml:
+    - ${GOOGLEAPIS}/google/iam/iam.yaml
+  gapic_api_yaml:
+    - ${GOOGLEAPIS}/google/iam/admin/v1/iam_gapic.yaml
+  output_dir: ${REPOROOT}/artman/output
+java:
+  gapic_code_dir: ${REPOROOT}/artman/output/java/google-cloud-iam
+python:
+  gapic_code_dir: ${REPOROOT}/artman/output/gcloud-python-iam
+go:
+  gapic_code_dir: ${REPOROOT}/gapi-iam-go
+csharp:
+  gapic_code_dir: ${REPOROOT}/artman/output/gcloud-csharp-iam
+php:
+  gapic_code_dir: ${REPOROOT}/artman/output/gcloud-php-iam
+ruby:
+  gapic_code_dir: ${REPOROOT}/google-cloud-ruby/google-cloud-iam
+nodejs:
+  gapic_code_dir: ${REPOROOT}/google-cloud-node/packages/iam
